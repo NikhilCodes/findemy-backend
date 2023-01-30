@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+  labels:
+    app: api
+    lb: external
+
+spec:
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      labels:
+        app: api
+        lb: external
+
+    spec:
+      containers:
+        - name: api
+          env:
+            - name: TOKEN_SECRET
+              value: coffeededobhaiyabahutneendayihai
+            - name: DB_URI
+              value: mongodb+srv://nikhil:nikhil@findemycluster.nwktsn2.mongodb.net/findemy?retryWrites=true&w=majority
+          image: 042850181621.dkr.ecr.ap-south-1.amazonaws.com/findemy-backend:latest
+          ports:
+            - containerPort: 8080
