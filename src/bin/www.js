@@ -1,6 +1,7 @@
 import app from '../app.js';
 import debugLib from 'debug';
-import http from 'http';
+import https from 'https';
+import { readFileSync } from 'fs';
 
 const debug = debugLib('express:server');
 
@@ -8,7 +9,12 @@ const port = process.env.PORT || '8080'
 
 app.set('port', port);
 
-const server = http.createServer(app);
+const options = {
+  key: readFileSync(`src/bin/server.key`),
+  cert: readFileSync(`src/bin/server.cert`),
+}
+
+const server = https.createServer(options, app);
 
 server.listen(port);
 server.on('error', onError)

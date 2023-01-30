@@ -1,14 +1,14 @@
 import { Cart, Course, Enroll } from '../entities';
 import { Schema, Types } from 'mongoose';
 
-export async function findCoursesByTitleSubstringAndLevels(substr, levels, userId, page=0) {
+export async function findCoursesByTitleSubstringAndLevels(substr, levels, userId, page = 0) {
   const skip = page * 10;
   const query = [
     {
       $search: {
         index: 'fulltxt_search',
         text: {
-          query: substr,
+          query: `${substr}`,
           path: {
             wildcard: '*'
           }
@@ -38,6 +38,14 @@ export async function findCoursesByTitleSubstringAndLevels(substr, levels, userI
       },
     },
     {
+      $lookup: {
+        from: 'enrolls',
+        localField: '_id',
+        foreignField: 'course',
+        as: 'enrollDocs',
+      }
+    },
+    {
       $project: {
         title: 1,
         description: 1,
@@ -56,7 +64,10 @@ export async function findCoursesByTitleSubstringAndLevels(substr, levels, userI
             $size: "$ratings",
           },
         },
-      }
+        userIsEnrolled: {
+          $in: [new Types.ObjectId(userId), '$enrollDocs.user'],
+        },
+      },
     },
     {
       $sort: {
@@ -70,7 +81,6 @@ export async function findCoursesByTitleSubstringAndLevels(substr, levels, userI
       $skip: skip,
     }
   ];
-  console.log(levels);
   if (levels.length > 0) {
     query[1] = {
       $match: {
@@ -101,7 +111,22 @@ export async function findCoursesByTitleSubstringAndLevels(substr, levels, userI
 
   return {
     data: dataWithCart,
-    total: await Course.countDocuments({level: {$in: levels}}),
+    total: await Course.aggregate([
+      {
+        $search: {
+          index: 'fulltxt_search',
+          text: {
+            query: `${substr}`,
+            path: {
+              wildcard: '*'
+            }
+          }
+        }
+      },
+      {
+        $match: { level: { $in: levels } }
+      }
+    ]).then((data) => data.length),
   }
 }
 

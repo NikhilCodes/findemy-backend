@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="@findemy-atlas" uuid="7d54eb5b-3361-4055-bf7e-1cd562dcd825">
+    <data-source source="LOCAL" name="findemy@findemycluster.nwktsn2.mongodb.net" uuid="f490b2a1-6552-4ca5-b3a7-e00d3d92701f">
       <driver-ref>mongo</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>
-      <jdbc-url>mongodb+srv://findemycluster.nwktsn2.mongodb.net/findemy</jdbc-url>
+      <jdbc-url>mongodb+srv://findemycluster.nwktsn2.mongodb.net/findemy?retryWrites=true&amp;w=majority</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

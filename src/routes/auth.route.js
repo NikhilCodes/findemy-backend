@@ -10,11 +10,15 @@ const router = express.Router();
 router.get('/me', authMiddleware, async (req, res) => {
   const userId = req.user.sub;
   const user = await findUserById(userId);
-  res.send({
-    _id: user._id,
-    email: user.email,
-    name: user.name,
-  });
+  if (user) {
+    res.send({
+      _id: user._id,
+      email: user.email,
+      name: user.name,
+    });
+  } else {
+    res.status(404).send({ success: false, reason: 'User not found' });
+  }
 })
 
 router.post('/login', async (req, res) => {

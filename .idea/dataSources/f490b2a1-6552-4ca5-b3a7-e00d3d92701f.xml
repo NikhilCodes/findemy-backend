@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="findemy@findemycluster.nwktsn2.mongodb.net">
+  <database-model serializer="dbm" dbms="MONGO" family-id="MONGO" format-version="4.45">
+    <root id="1">
+      <ServerVersion>5.0.14</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="admin"/>
+    <schema id="3" parent="1" name="findemy">
+      <Current>1</Current>
+    </schema>
+    <schema id="4" parent="1" name="local"/>
+    <schema id="5" parent="1" name="test"/>
+    <table id="6" parent="3" name="carts"/>
+    <table id="7" parent="3" name="courses"/>
+    <table id="8" parent="3" name="enrolls"/>
+    <table id="9" parent="3" name="ratings"/>
+    <table id="10" parent="3" name="users"/>
+    <column id="11" parent="7" name="_id">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="12" parent="7" name="creator">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="13" parent="7" name="description">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="14" parent="7" name="isBestSeller">
+      <DasType>Boolean|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="15" parent="7" name="learnings">
+      <DasType>Array|2003s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="16" parent="7" name="price">
+      <DasType>Object|4999544s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="17" parent="7" name="requirements">
+      <DasType>Array|2003s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="18" parent="7" name="subTitle">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="19" parent="7" name="lectures">
+      <DasType>Int32|4s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="20" parent="7" name="price.discountPrice">
+      <DasType>Int32|4s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="21" parent="7" name="thumbnail">
+      <DasType>String|12s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="22" parent="7" name="level">
+      <DasType>String|12s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="23" parent="7" name="price.originalPrice">
+      <DasType>Int32|4s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="24" parent="7" name="title">
+      <DasType>String|12s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="25" parent="7" name="totalHours">
+      <DasType>Int32|4s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="26" parent="7" name="trailerVideo">
+      <DasType>String|12s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="27" parent="8" name="_id">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="28" parent="8" name="__v">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="29" parent="8" name="course">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="30" parent="8" name="createdAt">
+      <DasType>ISODate|91s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="31" parent="8" name="updatedAt">
+      <DasType>ISODate|91s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="32" parent="8" name="user">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="33" parent="9" name="_id">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="34" parent="9" name="comment">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="35" parent="9" name="rating">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="36" parent="9" name="user">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="37" parent="9" name="course">
+      <DasType>ObjectId|12s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="38" parent="10" name="_id">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="39" parent="10" name="avatar">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="40" parent="10" name="courses">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="41" parent="10" name="description">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="42" parent="10" name="email">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="43" parent="10" name="isCreator">
+      <DasType>Boolean|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="44" parent="10" name="name">
+      <DasType>String|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="45" parent="10" name="rating">
+      <DasType>Double|8s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="46" parent="10" name="reviews">
+      <DasType>Int32|4s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="47" parent="10" name="updatedAt">
+      <DasType>ISODate|91s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="48" parent="10" name="__v">
+      <DasType>Int32|4s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="49" parent="10" name="createdAt">
+      <DasType>ISODate|91s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="50" parent="10" name="enrolled">
+      <DasType>String|12s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="51" parent="10" name="occupation">
+      <DasType>String|12s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="52" parent="10" name="students">
+      <DasType>Int32|4s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="53" parent="10" name="password">
+      <DasType>String|12s</DasType>
+      <Position>3</Position>
+    </column>
+  </database-model>
+</dataSource>
