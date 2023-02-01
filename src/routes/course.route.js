@@ -5,15 +5,15 @@ import {
   findCoursesByStudentViewing,
   findCoursesByTitleSubstringAndLevels
 } from "../services/course.service.js";
-import { authMiddleware } from "../middlewares/auth.middleware.js";
+import { authMiddleware, authMiddlewareLax } from "../middlewares/auth.middleware.js";
 import { emptyCartItems } from "../services/cart.service.js";
 
 const router = express.Router();
 
-router.get('/search', authMiddleware, async (req, res) => {
+router.get('/search', authMiddlewareLax, async (req, res) => {
   let { keyword, levels } = req.query;
   levels = levels ? levels.split(',') : ['Beginner', 'Intermediate', 'Advanced', 'All Levels'];
-  const courses = await findCoursesByTitleSubstringAndLevels(keyword, levels, req.user.sub);
+  const courses = await findCoursesByTitleSubstringAndLevels(keyword, levels, req.user?.sub);
   res.json(courses);
 });
 
@@ -22,8 +22,8 @@ router.get('/popular', async (req, res) => {
   res.json(courses);
 });
 
-router.get('/:id', authMiddleware, async (req, res) => {
-  const course = await findCoursesById(req.params.id, req.user.sub);
+router.get('/:id', authMiddlewareLax, async (req, res) => {
+  const course = await findCoursesById(req.params.id, req.user?.sub);
   res.json(course);
 });
 

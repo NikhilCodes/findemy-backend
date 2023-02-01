@@ -1,6 +1,7 @@
 import app from '../app.js';
 import debugLib from 'debug';
 import https from 'https';
+import http from 'http';
 import { readFileSync } from 'fs';
 
 const debug = debugLib('express:server');
@@ -15,10 +16,15 @@ const options = {
 }
 
 const server = https.createServer(options, app);
+const httpServer = http.createServer(app);
 
 server.listen(port);
 server.on('error', onError)
 server.on('listening', onListening)
+
+httpServer.listen(8081);
+httpServer.on('error', onError)
+httpServer.on('listening', onListening)
 
 function onError(error) {
   if (error.syscall !== 'listen') {
