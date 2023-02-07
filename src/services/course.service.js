@@ -56,6 +56,9 @@ export async function findCoursesByTitleSubstringAndLevels(substr, levels, userI
         },
         price: 1,
         isBestSeller: 1,
+        lectures: 1,
+        totalHours: 1,
+        level: 1,
         rating: {
           averageRating: {
             $avg: '$ratings.rating',
@@ -176,6 +179,7 @@ export async function findCoursesById(id, userId) {
         description: 1,
         thumbnail: 1,
         learnings: 1,
+        lang: 1,
         requirements: 1,
         creator: {
           name: 1,
