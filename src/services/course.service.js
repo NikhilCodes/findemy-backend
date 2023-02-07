@@ -1,8 +1,8 @@
 import { Cart, Course, Enroll } from '../entities';
-import { Schema, Types } from 'mongoose';
+import { Types } from 'mongoose';
 
-export async function findCoursesByTitleSubstringAndLevels(substr, levels, userId, page = 0) {
-  const skip = page * 10;
+export async function findCoursesByTitleSubstringAndLevels(substr, levels, userId, size=10, page = 0) {
+  const skip = page * size;
   const query = [
     {
       $search: {
@@ -75,7 +75,7 @@ export async function findCoursesByTitleSubstringAndLevels(substr, levels, userI
       }
     },
     {
-      $limit: 10,
+      $limit: skip + size,
     },
     {
       $skip: skip,
@@ -90,9 +90,7 @@ export async function findCoursesByTitleSubstringAndLevels(substr, levels, userI
       }
     };
   } else {
-    query[1] = {
-      $match: {}
-    };
+    query.splice(1, 1);
   }
   const data = await Course.aggregate(query);
 

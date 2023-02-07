@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78908bb2-12bf-48af-b0b2-b1bc7ecbfdcc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/infra/eks-config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f490b2a1-6552-4ca5-b3a7-e00d3d92701f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f490b2a1-6552-4ca5-b3a7-e00d3d92701f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/www.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/www.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middlewares/auth.middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middlewares/auth.middleware.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/course.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/course.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/course.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/course.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,32 +38,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "go.import.settings.migrated": "true",
-    "last_opened_file_path": "/Users/nikhilnayak/Code/Personal/findemy-backend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "advanced.settings",
-    "show.migrate.to.gradle.popup": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nikhilnayak/Code/Personal/findemy-backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mongo"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mongo&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -73,7 +72,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674999941719</updated>
-      <workItem from="1674999942896" duration="45182000" />
+      <workItem from="1674999942896" duration="47720000" />
+      <workItem from="1675516707140" duration="53000" />
+      <workItem from="1675573247872" duration="6474000" />
+      <workItem from="1675674021985" duration="1509000" />
+      <workItem from="1675714069444" duration="1652000" />
     </task>
     <servers />
   </component>

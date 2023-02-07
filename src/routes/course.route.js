@@ -11,9 +11,9 @@ import { emptyCartItems } from "../services/cart.service.js";
 const router = express.Router();
 
 router.get('/search', authMiddlewareLax, async (req, res) => {
-  let { keyword, levels } = req.query;
+  let { keyword, levels, page, size } = req.query;
   levels = levels ? levels.split(',') : ['Beginner', 'Intermediate', 'Advanced', 'All Levels'];
-  const courses = await findCoursesByTitleSubstringAndLevels(keyword, levels, req.user?.sub);
+  const courses = await findCoursesByTitleSubstringAndLevels(keyword, levels, req.user?.sub, +size, +page);
   res.json(courses);
 });
 
