@@ -37,12 +37,20 @@ router.post('/login', async (req, res) => {
 })
 
 router.post('/signup', async (req, res) => {
-  const { name, email, password } = req.body;
-  const passwordHashed = hashPassword(password);
-  const user = await saveUser({ name, email, password: passwordHashed });
-  res.send({
-    success: true,
-  });
+  try {
+    const { name, email, password } = req.body;
+    const passwordHashed = hashPassword(password);
+    const user = await saveUser({ name, email, password: passwordHashed });
+    res.send({
+      success: true,
+      user,
+    });
+  } catch (e) {
+    res.send({
+      success: false,
+      code: e.code,
+    })
+  }
 })
 
 export default router;

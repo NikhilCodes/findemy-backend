@@ -60,7 +60,7 @@ export async function findCoursesByTitleSubstringAndLevels(substr, levels, userI
           averageRating: {
             $avg: '$ratings.rating',
           },
-          totalRating: {
+          totalRatings: {
             $size: "$ratings",
           },
         },
@@ -247,7 +247,7 @@ export function findCoursesByStudentViewing() {
           averageRating: {
             $avg: '$ratings.rating',
           },
-          totalRating: {
+          totalRatings: {
             $size: "$ratings",
           },
         },
